@@ -1,0 +1,102 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qamqorgas Company</title>
+
+
+    <!--Bootstrap 5 CSS link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+    <!--Navbar Section STARTS-->
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'homepage' %}">QAMQORGAS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'appraisals' %}">Business Appraisals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'brokerage' %}">Brookerage Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'consulting' %}">Consulting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!--Navbar Section ENDS-->
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!--Footer section STARTS-->
+    <div class="container-fluid" id="footer">
+        <div class="row px-5 py-5">
+          <div class="col">
+            <h6>Site Menu</h6>
+
+            <ul>
+              <li><a href="{% url 'about' %}">About Us</a></li>
+              <li><a href="{% url 'appraisals' %}">Business Appraisals</a></li>
+              <li><a href="{% url 'brokerage' %}">Brokerage Services</a></li>
+              <li><a href="{% url 'consulting' %}">Consulting</a></li>
+              <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6>Contact Us</h6>
+
+            <span>Business Intermediary Services</span>
+            <span>1058 Heather Glen Blvd</span>
+            <span>Little River, SC 29566</span>
+            <span>Phone: 828.230.6393</span>
+            <span>Fax: 866.208.1041</span>
+          </div>
+          <div class="col">
+            <h6>Newsletter Sign Up</h6>
+          </div>
+          <div class="col">
+
+          </div>
+        </div>
+      </div>
+
+      <!--Footer section ENDS-->
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+
+</html>
