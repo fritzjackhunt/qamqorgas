@@ -29,7 +29,7 @@ def contact(request):
             contact_fname, 
             contact_message,
             contact_email,
-            ['essiet.aniekan@yahoo.com'],
+            ['admin@qamqorqas.com'],
             fail_silently = False,
         )
 
